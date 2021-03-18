@@ -16,7 +16,7 @@ class TCPClient : public QObject {
 
     int getTimeoutAlive() const;
     void setTimeoutAlive(int timeoutAlive);
-
+    QString getCurrentServer();
    private:
     // server
     QString hostName;

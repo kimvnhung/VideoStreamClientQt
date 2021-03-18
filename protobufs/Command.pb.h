@@ -33,6 +33,7 @@
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
 #include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
+#include <google/protobuf/any.pb.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_Command_2eproto
@@ -48,7 +49,7 @@ struct TableStruct_Command_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[3]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[1]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -58,16 +59,8 @@ extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table
 class Command;
 class CommandDefaultTypeInternal;
 extern CommandDefaultTypeInternal _Command_default_instance_;
-class Command_Address;
-class Command_AddressDefaultTypeInternal;
-extern Command_AddressDefaultTypeInternal _Command_Address_default_instance_;
-class Command_Point;
-class Command_PointDefaultTypeInternal;
-extern Command_PointDefaultTypeInternal _Command_Point_default_instance_;
 PROTOBUF_NAMESPACE_OPEN
 template<> ::Command* Arena::CreateMaybeMessage<::Command>(Arena*);
-template<> ::Command_Address* Arena::CreateMaybeMessage<::Command_Address>(Arena*);
-template<> ::Command_Point* Arena::CreateMaybeMessage<::Command_Point>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 
 enum Command_Header : int {
@@ -100,278 +93,6 @@ inline bool Command_Header_Parse(
     Command_Header_descriptor(), name, value);
 }
 // ===================================================================
-
-class Command_Address :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Command.Address) */ {
- public:
-  Command_Address();
-  virtual ~Command_Address();
-
-  Command_Address(const Command_Address& from);
-  Command_Address(Command_Address&& from) noexcept
-    : Command_Address() {
-    *this = ::std::move(from);
-  }
-
-  inline Command_Address& operator=(const Command_Address& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline Command_Address& operator=(Command_Address&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const Command_Address& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const Command_Address* internal_default_instance() {
-    return reinterpret_cast<const Command_Address*>(
-               &_Command_Address_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    0;
-
-  void Swap(Command_Address* other);
-  friend void swap(Command_Address& a, Command_Address& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline Command_Address* New() const final {
-    return CreateMaybeMessage<Command_Address>(nullptr);
-  }
-
-  Command_Address* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Command_Address>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Command_Address& from);
-  void MergeFrom(const Command_Address& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  #else
-  bool MergePartialFromCodedStream(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
-  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  void SerializeWithCachedSizes(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(Command_Address* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "Command.Address";
-  }
-  private:
-  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
-    return nullptr;
-  }
-  inline void* MaybeArenaPtr() const {
-    return nullptr;
-  }
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Command_2eproto);
-    return ::descriptor_table_Command_2eproto.file_level_metadata[kIndexInFileMessages];
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // string ip = 1;
-  void clear_ip();
-  static const int kIpFieldNumber = 1;
-  const std::string& ip() const;
-  void set_ip(const std::string& value);
-  void set_ip(std::string&& value);
-  void set_ip(const char* value);
-  void set_ip(const char* value, size_t size);
-  std::string* mutable_ip();
-  std::string* release_ip();
-  void set_allocated_ip(std::string* ip);
-
-  // int32 port = 2;
-  void clear_port();
-  static const int kPortFieldNumber = 2;
-  ::PROTOBUF_NAMESPACE_ID::int32 port() const;
-  void set_port(::PROTOBUF_NAMESPACE_ID::int32 value);
-
-  // @@protoc_insertion_point(class_scope:Command.Address)
- private:
-  class HasBitSetters;
-
-  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ip_;
-  ::PROTOBUF_NAMESPACE_ID::int32 port_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_Command_2eproto;
-};
-// -------------------------------------------------------------------
-
-class Command_Point :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Command.Point) */ {
- public:
-  Command_Point();
-  virtual ~Command_Point();
-
-  Command_Point(const Command_Point& from);
-  Command_Point(Command_Point&& from) noexcept
-    : Command_Point() {
-    *this = ::std::move(from);
-  }
-
-  inline Command_Point& operator=(const Command_Point& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline Command_Point& operator=(Command_Point&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const Command_Point& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const Command_Point* internal_default_instance() {
-    return reinterpret_cast<const Command_Point*>(
-               &_Command_Point_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    1;
-
-  void Swap(Command_Point* other);
-  friend void swap(Command_Point& a, Command_Point& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline Command_Point* New() const final {
-    return CreateMaybeMessage<Command_Point>(nullptr);
-  }
-
-  Command_Point* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Command_Point>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Command_Point& from);
-  void MergeFrom(const Command_Point& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  #else
-  bool MergePartialFromCodedStream(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
-  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  void SerializeWithCachedSizes(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(Command_Point* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "Command.Point";
-  }
-  private:
-  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
-    return nullptr;
-  }
-  inline void* MaybeArenaPtr() const {
-    return nullptr;
-  }
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Command_2eproto);
-    return ::descriptor_table_Command_2eproto.file_level_metadata[kIndexInFileMessages];
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // int32 x = 1;
-  void clear_x();
-  static const int kXFieldNumber = 1;
-  ::PROTOBUF_NAMESPACE_ID::int32 x() const;
-  void set_x(::PROTOBUF_NAMESPACE_ID::int32 value);
-
-  // int32 y = 2;
-  void clear_y();
-  static const int kYFieldNumber = 2;
-  ::PROTOBUF_NAMESPACE_ID::int32 y() const;
-  void set_y(::PROTOBUF_NAMESPACE_ID::int32 value);
-
-  // @@protoc_insertion_point(class_scope:Command.Point)
- private:
-  class HasBitSetters;
-
-  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::int32 x_;
-  ::PROTOBUF_NAMESPACE_ID::int32 y_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_Command_2eproto;
-};
-// -------------------------------------------------------------------
 
 class Command :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Command) */ {
@@ -415,7 +136,7 @@ class Command :
                &_Command_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    0;
 
   void Swap(Command* other);
   friend void swap(Command& a, Command& b) {
@@ -480,9 +201,6 @@ class Command :
 
   // nested types ----------------------------------------------------
 
-  typedef Command_Address Address;
-  typedef Command_Point Point;
-
   typedef Command_Header Header;
   static constexpr Header UNKNOWN_HEADER =
     Command_Header_UNKNOWN_HEADER;
@@ -523,23 +241,14 @@ class Command :
 
   // accessors -------------------------------------------------------
 
-  // .Command.Address address = 2;
-  bool has_address() const;
-  void clear_address();
-  static const int kAddressFieldNumber = 2;
-  const ::Command_Address& address() const;
-  ::Command_Address* release_address();
-  ::Command_Address* mutable_address();
-  void set_allocated_address(::Command_Address* address);
-
-  // .Command.Point position = 3;
-  bool has_position() const;
-  void clear_position();
-  static const int kPositionFieldNumber = 3;
-  const ::Command_Point& position() const;
-  ::Command_Point* release_position();
-  ::Command_Point* mutable_position();
-  void set_allocated_position(::Command_Point* position);
+  // .google.protobuf.Any payload = 2;
+  bool has_payload() const;
+  void clear_payload();
+  static const int kPayloadFieldNumber = 2;
+  const PROTOBUF_NAMESPACE_ID::Any& payload() const;
+  PROTOBUF_NAMESPACE_ID::Any* release_payload();
+  PROTOBUF_NAMESPACE_ID::Any* mutable_payload();
+  void set_allocated_payload(PROTOBUF_NAMESPACE_ID::Any* payload);
 
   // .Command.Header header = 1;
   void clear_header();
@@ -552,8 +261,7 @@ class Command :
   class HasBitSetters;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::Command_Address* address_;
-  ::Command_Point* position_;
+  PROTOBUF_NAMESPACE_ID::Any* payload_;
   int header_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_Command_2eproto;
@@ -567,107 +275,6 @@ class Command :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// Command_Address
-
-// string ip = 1;
-inline void Command_Address::clear_ip() {
-  ip_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline const std::string& Command_Address::ip() const {
-  // @@protoc_insertion_point(field_get:Command.Address.ip)
-  return ip_.GetNoArena();
-}
-inline void Command_Address::set_ip(const std::string& value) {
-  
-  ip_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Command.Address.ip)
-}
-inline void Command_Address::set_ip(std::string&& value) {
-  
-  ip_.SetNoArena(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Command.Address.ip)
-}
-inline void Command_Address::set_ip(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  ip_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Command.Address.ip)
-}
-inline void Command_Address::set_ip(const char* value, size_t size) {
-  
-  ip_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Command.Address.ip)
-}
-inline std::string* Command_Address::mutable_ip() {
-  
-  // @@protoc_insertion_point(field_mutable:Command.Address.ip)
-  return ip_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline std::string* Command_Address::release_ip() {
-  // @@protoc_insertion_point(field_release:Command.Address.ip)
-  
-  return ip_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline void Command_Address::set_allocated_ip(std::string* ip) {
-  if (ip != nullptr) {
-    
-  } else {
-    
-  }
-  ip_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ip);
-  // @@protoc_insertion_point(field_set_allocated:Command.Address.ip)
-}
-
-// int32 port = 2;
-inline void Command_Address::clear_port() {
-  port_ = 0;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Command_Address::port() const {
-  // @@protoc_insertion_point(field_get:Command.Address.port)
-  return port_;
-}
-inline void Command_Address::set_port(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  
-  port_ = value;
-  // @@protoc_insertion_point(field_set:Command.Address.port)
-}
-
-// -------------------------------------------------------------------
-
-// Command_Point
-
-// int32 x = 1;
-inline void Command_Point::clear_x() {
-  x_ = 0;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Command_Point::x() const {
-  // @@protoc_insertion_point(field_get:Command.Point.x)
-  return x_;
-}
-inline void Command_Point::set_x(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  
-  x_ = value;
-  // @@protoc_insertion_point(field_set:Command.Point.x)
-}
-
-// int32 y = 2;
-inline void Command_Point::clear_y() {
-  y_ = 0;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Command_Point::y() const {
-  // @@protoc_insertion_point(field_get:Command.Point.y)
-  return y_;
-}
-inline void Command_Point::set_y(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  
-  y_ = value;
-  // @@protoc_insertion_point(field_set:Command.Point.y)
-}
-
-// -------------------------------------------------------------------
-
 // Command
 
 // .Command.Header header = 1;
@@ -684,115 +291,54 @@ inline void Command::set_header(::Command_Header value) {
   // @@protoc_insertion_point(field_set:Command.header)
 }
 
-// .Command.Address address = 2;
-inline bool Command::has_address() const {
-  return this != internal_default_instance() && address_ != nullptr;
+// .google.protobuf.Any payload = 2;
+inline bool Command::has_payload() const {
+  return this != internal_default_instance() && payload_ != nullptr;
 }
-inline void Command::clear_address() {
-  if (GetArenaNoVirtual() == nullptr && address_ != nullptr) {
-    delete address_;
-  }
-  address_ = nullptr;
+inline const PROTOBUF_NAMESPACE_ID::Any& Command::payload() const {
+  const PROTOBUF_NAMESPACE_ID::Any* p = payload_;
+  // @@protoc_insertion_point(field_get:Command.payload)
+  return p != nullptr ? *p : *reinterpret_cast<const PROTOBUF_NAMESPACE_ID::Any*>(
+      &PROTOBUF_NAMESPACE_ID::_Any_default_instance_);
 }
-inline const ::Command_Address& Command::address() const {
-  const ::Command_Address* p = address_;
-  // @@protoc_insertion_point(field_get:Command.address)
-  return p != nullptr ? *p : *reinterpret_cast<const ::Command_Address*>(
-      &::_Command_Address_default_instance_);
-}
-inline ::Command_Address* Command::release_address() {
-  // @@protoc_insertion_point(field_release:Command.address)
+inline PROTOBUF_NAMESPACE_ID::Any* Command::release_payload() {
+  // @@protoc_insertion_point(field_release:Command.payload)
   
-  ::Command_Address* temp = address_;
-  address_ = nullptr;
+  PROTOBUF_NAMESPACE_ID::Any* temp = payload_;
+  payload_ = nullptr;
   return temp;
 }
-inline ::Command_Address* Command::mutable_address() {
+inline PROTOBUF_NAMESPACE_ID::Any* Command::mutable_payload() {
   
-  if (address_ == nullptr) {
-    auto* p = CreateMaybeMessage<::Command_Address>(GetArenaNoVirtual());
-    address_ = p;
+  if (payload_ == nullptr) {
+    auto* p = CreateMaybeMessage<PROTOBUF_NAMESPACE_ID::Any>(GetArenaNoVirtual());
+    payload_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:Command.address)
-  return address_;
+  // @@protoc_insertion_point(field_mutable:Command.payload)
+  return payload_;
 }
-inline void Command::set_allocated_address(::Command_Address* address) {
+inline void Command::set_allocated_payload(PROTOBUF_NAMESPACE_ID::Any* payload) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == nullptr) {
-    delete address_;
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(payload_);
   }
-  if (address) {
+  if (payload) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
     if (message_arena != submessage_arena) {
-      address = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, address, submessage_arena);
+      payload = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, payload, submessage_arena);
     }
     
   } else {
     
   }
-  address_ = address;
-  // @@protoc_insertion_point(field_set_allocated:Command.address)
-}
-
-// .Command.Point position = 3;
-inline bool Command::has_position() const {
-  return this != internal_default_instance() && position_ != nullptr;
-}
-inline void Command::clear_position() {
-  if (GetArenaNoVirtual() == nullptr && position_ != nullptr) {
-    delete position_;
-  }
-  position_ = nullptr;
-}
-inline const ::Command_Point& Command::position() const {
-  const ::Command_Point* p = position_;
-  // @@protoc_insertion_point(field_get:Command.position)
-  return p != nullptr ? *p : *reinterpret_cast<const ::Command_Point*>(
-      &::_Command_Point_default_instance_);
-}
-inline ::Command_Point* Command::release_position() {
-  // @@protoc_insertion_point(field_release:Command.position)
-  
-  ::Command_Point* temp = position_;
-  position_ = nullptr;
-  return temp;
-}
-inline ::Command_Point* Command::mutable_position() {
-  
-  if (position_ == nullptr) {
-    auto* p = CreateMaybeMessage<::Command_Point>(GetArenaNoVirtual());
-    position_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:Command.position)
-  return position_;
-}
-inline void Command::set_allocated_position(::Command_Point* position) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete position_;
-  }
-  if (position) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      position = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, position, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  position_ = position;
-  // @@protoc_insertion_point(field_set_allocated:Command.position)
+  payload_ = payload;
+  // @@protoc_insertion_point(field_set_allocated:Command.payload)
 }
 
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
 
 // @@protoc_insertion_point(namespace_scope)
 

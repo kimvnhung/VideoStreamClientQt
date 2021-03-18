@@ -62,35 +62,6 @@ PROTOBUF_NAMESPACE_OPEN
 template<> ::Reply* Arena::CreateMaybeMessage<::Reply>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 
-enum Reply_Header : int {
-  Reply_Header_UNKNOWN_HEADER = 0,
-  Reply_Header_ESTABLISH_CONNECTION = 1,
-  Reply_Header_START_STREAM = 2,
-  Reply_Header_STOP_STREAM = 3,
-  Reply_Header_START_TRACKING = 4,
-  Reply_Header_STOP_TRACKING = 5,
-  Reply_Header_Reply_Header_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
-  Reply_Header_Reply_Header_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
-};
-bool Reply_Header_IsValid(int value);
-constexpr Reply_Header Reply_Header_Header_MIN = Reply_Header_UNKNOWN_HEADER;
-constexpr Reply_Header Reply_Header_Header_MAX = Reply_Header_STOP_TRACKING;
-constexpr int Reply_Header_Header_ARRAYSIZE = Reply_Header_Header_MAX + 1;
-
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* Reply_Header_descriptor();
-template<typename T>
-inline const std::string& Reply_Header_Name(T enum_t_value) {
-  static_assert(::std::is_same<T, Reply_Header>::value ||
-    ::std::is_integral<T>::value,
-    "Incorrect type passed to function Reply_Header_Name.");
-  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
-    Reply_Header_descriptor(), enum_t_value);
-}
-inline bool Reply_Header_Parse(
-    const std::string& name, Reply_Header* value) {
-  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<Reply_Header>(
-    Reply_Header_descriptor(), name, value);
-}
 enum Reply_Status : int {
   Reply_Status_UNKNOWN_STATUS = 0,
   Reply_Status_SUCCESS = 1,
@@ -226,44 +197,6 @@ class Reply :
 
   // nested types ----------------------------------------------------
 
-  typedef Reply_Header Header;
-  static constexpr Header UNKNOWN_HEADER =
-    Reply_Header_UNKNOWN_HEADER;
-  static constexpr Header ESTABLISH_CONNECTION =
-    Reply_Header_ESTABLISH_CONNECTION;
-  static constexpr Header START_STREAM =
-    Reply_Header_START_STREAM;
-  static constexpr Header STOP_STREAM =
-    Reply_Header_STOP_STREAM;
-  static constexpr Header START_TRACKING =
-    Reply_Header_START_TRACKING;
-  static constexpr Header STOP_TRACKING =
-    Reply_Header_STOP_TRACKING;
-  static inline bool Header_IsValid(int value) {
-    return Reply_Header_IsValid(value);
-  }
-  static constexpr Header Header_MIN =
-    Reply_Header_Header_MIN;
-  static constexpr Header Header_MAX =
-    Reply_Header_Header_MAX;
-  static constexpr int Header_ARRAYSIZE =
-    Reply_Header_Header_ARRAYSIZE;
-  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
-  Header_descriptor() {
-    return Reply_Header_descriptor();
-  }
-  template<typename T>
-  static inline const std::string& Header_Name(T enum_t_value) {
-    static_assert(::std::is_same<T, Header>::value ||
-      ::std::is_integral<T>::value,
-      "Incorrect type passed to function Header_Name.");
-    return Reply_Header_Name(enum_t_value);
-  }
-  static inline bool Header_Parse(const std::string& name,
-      Header* value) {
-    return Reply_Header_Parse(name, value);
-  }
-
   typedef Reply_Status Status;
   static constexpr Status UNKNOWN_STATUS =
     Reply_Status_UNKNOWN_STATUS;
@@ -298,9 +231,9 @@ class Reply :
 
   // accessors -------------------------------------------------------
 
-  // string description = 3;
+  // string description = 2;
   void clear_description();
-  static const int kDescriptionFieldNumber = 3;
+  static const int kDescriptionFieldNumber = 2;
   const std::string& description() const;
   void set_description(const std::string& value);
   void set_description(std::string&& value);
@@ -310,15 +243,9 @@ class Reply :
   std::string* release_description();
   void set_allocated_description(std::string* description);
 
-  // .Reply.Header header = 1;
-  void clear_header();
-  static const int kHeaderFieldNumber = 1;
-  ::Reply_Header header() const;
-  void set_header(::Reply_Header value);
-
-  // .Reply.Status status = 2;
+  // .Reply.Status status = 1;
   void clear_status();
-  static const int kStatusFieldNumber = 2;
+  static const int kStatusFieldNumber = 1;
   ::Reply_Status status() const;
   void set_status(::Reply_Status value);
 
@@ -328,7 +255,6 @@ class Reply :
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr description_;
-  int header_;
   int status_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_Reply_2eproto;
@@ -344,21 +270,7 @@ class Reply :
 #endif  // __GNUC__
 // Reply
 
-// .Reply.Header header = 1;
-inline void Reply::clear_header() {
-  header_ = 0;
-}
-inline ::Reply_Header Reply::header() const {
-  // @@protoc_insertion_point(field_get:Reply.header)
-  return static_cast< ::Reply_Header >(header_);
-}
-inline void Reply::set_header(::Reply_Header value) {
-  
-  header_ = value;
-  // @@protoc_insertion_point(field_set:Reply.header)
-}
-
-// .Reply.Status status = 2;
+// .Reply.Status status = 1;
 inline void Reply::clear_status() {
   status_ = 0;
 }
@@ -372,7 +284,7 @@ inline void Reply::set_status(::Reply_Status value) {
   // @@protoc_insertion_point(field_set:Reply.status)
 }
 
-// string description = 3;
+// string description = 2;
 inline void Reply::clear_description() {
   description_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -432,11 +344,6 @@ inline void Reply::set_allocated_description(std::string* description) {
 
 PROTOBUF_NAMESPACE_OPEN
 
-template <> struct is_proto_enum< ::Reply_Header> : ::std::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::Reply_Header>() {
-  return ::Reply_Header_descriptor();
-}
 template <> struct is_proto_enum< ::Reply_Status> : ::std::true_type {};
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::Reply_Status>() {

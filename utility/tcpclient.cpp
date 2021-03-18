@@ -30,6 +30,11 @@ void TCPClient::setTimeoutAlive(int timeoutAlive) {
     m_timeoutAlive = timeoutAlive;
 }
 
+QString TCPClient::getCurrentServer()
+{
+    return this->hostName;
+}
+
 bool TCPClient::isConnected() {
     if (clientSocket == nullptr) {
         return false;
@@ -136,6 +141,7 @@ void TCPClient::serverDisconnected() {
 
 void TCPClient::sendData(const QByteArray &data) {
     if (isConnected()) {
+        qDebug()<<"data size : "<<data.size();
         clientSocket->write(data);
         // Send any data which has not yet been sent.
         //        clientSocket->flush();
@@ -176,7 +182,7 @@ qint32 byteToInt(QByteArray source) {
 
 QByteArray TCPClient::getPacket() {
     // Find the beginning of protobuf packet.
-    int startIndex = receiveBuffer.indexOf(BEGINNING_OF_PACKET);
+    int startIndex = 0;
     if (startIndex < 0) {
         return QByteArray();
     }

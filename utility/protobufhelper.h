@@ -11,7 +11,8 @@ class ProtobufHelper : public QObject
     Q_OBJECT
 public:
     explicit ProtobufHelper(QObject *parent = nullptr);
-    static QByteArray getQByteArrayFrom(const char* data,int size);
+    static QByteArray GetQByteArrayFrom(const char* data,int size);
+    static QByteArray EncodeProtobufMessage(const char* data,int size);
     static Command* ParseCommandFrom(const QByteArray &data);
     static Reply* ParseRepplyFrom(const QByteArray &data);
 signals:

@@ -27,8 +27,16 @@ SOURCES += \
 # Network
     protobufs/Command.pb.cc \
     protobufs/Reply.pb.cc \
+    protobufs/Image.pb.cc \
+    protobufs/Point.pb.cc \
+    protobufs/Address.pb.cc \
+    protobufs/TrackingInformation.pb.cc \
+    protobufs/VideoSource.pb.cc \
+# Ultility
+    utility/base64.c \
     utility/protobufhelper.cpp \
-    utility/tcpclient.cpp
+    utility/tcpclient.cpp \
+    utility/utility.cpp
 
 HEADERS += \
     controllers/connectionpage.h \
@@ -37,8 +45,16 @@ HEADERS += \
 #Network
     protobufs/Command.pb.h \
     protobufs/Reply.pb.h \
+    protobufs/Image.pb.h \
+    protobufs/Point.pb.h \
+    protobufs/Address.pb.h \
+    protobufs/TrackingInformation.pb.h \
+    protobufs/VideoSource.pb.h \
+#ultility
+    utility/base64.h \
     utility/protobufhelper.h \
-    utility/tcpclient.h
+    utility/tcpclient.h \
+    utility/utility.h
 
 FORMS += \
     connectionpage.ui \

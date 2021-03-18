@@ -60,20 +60,6 @@
            </property>
           </widget>
          </item>
-         <item>
-          <widget class="QPushButton" name="startTrackingBtn">
-           <property name="text">
-            <string>Start Tracking</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="stopTrackingBtn">
-           <property name="text">
-            <string>Stop Tracking</string>
-           </property>
-          </widget>
-         </item>
         </layout>
        </item>
        <item>

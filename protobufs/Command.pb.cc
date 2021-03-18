@@ -15,16 +15,7 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_Command_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Command_Address_Command_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_Command_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Command_Point_Command_2eproto;
-class Command_AddressDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Command_Address> _instance;
-} _Command_Address_default_instance_;
-class Command_PointDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Command_Point> _instance;
-} _Command_Point_default_instance_;
+extern PROTOBUF_INTERNAL_EXPORT_google_2fprotobuf_2fany_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Any_google_2fprotobuf_2fany_2eproto;
 class CommandDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Command> _instance;
@@ -40,104 +31,53 @@ static void InitDefaultsscc_info_Command_Command_2eproto() {
   ::Command::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Command_Command_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_Command_Command_2eproto}, {
-      &scc_info_Command_Address_Command_2eproto.base,
-      &scc_info_Command_Point_Command_2eproto.base,}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Command_Command_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_Command_Command_2eproto}, {
+      &scc_info_Any_google_2fprotobuf_2fany_2eproto.base,}};
 
-static void InitDefaultsscc_info_Command_Address_Command_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::_Command_Address_default_instance_;
-    new (ptr) ::Command_Address();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::Command_Address::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Command_Address_Command_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_Command_Address_Command_2eproto}, {}};
-
-static void InitDefaultsscc_info_Command_Point_Command_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::_Command_Point_default_instance_;
-    new (ptr) ::Command_Point();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::Command_Point::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Command_Point_Command_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_Command_Point_Command_2eproto}, {}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Command_2eproto[3];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Command_2eproto[1];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_Command_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_Command_2eproto = nullptr;
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Command_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::Command_Address, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::Command_Address, ip_),
-  PROTOBUF_FIELD_OFFSET(::Command_Address, port_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::Command_Point, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::Command_Point, x_),
-  PROTOBUF_FIELD_OFFSET(::Command_Point, y_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::Command, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::Command, header_),
-  PROTOBUF_FIELD_OFFSET(::Command, address_),
-  PROTOBUF_FIELD_OFFSET(::Command, position_),
+  PROTOBUF_FIELD_OFFSET(::Command, payload_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::Command_Address)},
-  { 7, -1, sizeof(::Command_Point)},
-  { 14, -1, sizeof(::Command)},
+  { 0, -1, sizeof(::Command)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_Command_Address_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_Command_Point_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_Command_default_instance_),
 };
 
 const char descriptor_table_protodef_Command_2eproto[] =
-  "\n\rCommand.proto\"\266\002\n\007Command\022\037\n\006header\030\001 "
-  "\001(\0162\017.Command.Header\022!\n\007address\030\002 \001(\0132\020."
-  "Command.Address\022 \n\010position\030\003 \001(\0132\016.Comm"
-  "and.Point\032#\n\007Address\022\n\n\002ip\030\001 \001(\t\022\014\n\004port"
-  "\030\002 \001(\005\032\035\n\005Point\022\t\n\001x\030\001 \001(\005\022\t\n\001y\030\002 \001(\005\"\200\001"
-  "\n\006Header\022\022\n\016UNKNOWN_HEADER\020\000\022\030\n\024ESTABLIS"
-  "H_CONNECTION\020\001\022\020\n\014START_STREAM\020\002\022\017\n\013STOP"
-  "_STREAM\020\003\022\022\n\016START_TRACKING\020\004\022\021\n\rSTOP_TR"
-  "ACKING\020\005b\006proto3"
+  "\n\rCommand.proto\032\031google/protobuf/any.pro"
+  "to\"\324\001\n\007Command\022\037\n\006header\030\001 \001(\0162\017.Command"
+  ".Header\022%\n\007payload\030\002 \001(\0132\024.google.protob"
+  "uf.Any\"\200\001\n\006Header\022\022\n\016UNKNOWN_HEADER\020\000\022\030\n"
+  "\024ESTABLISH_CONNECTION\020\001\022\020\n\014START_STREAM\020"
+  "\002\022\017\n\013STOP_STREAM\020\003\022\022\n\016START_TRACKING\020\004\022\021"
+  "\n\rSTOP_TRACKING\020\005b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_Command_2eproto_deps[1] = {
+  &::descriptor_table_google_2fprotobuf_2fany_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Command_2eproto_sccs[3] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Command_2eproto_sccs[1] = {
   &scc_info_Command_Command_2eproto.base,
-  &scc_info_Command_Address_Command_2eproto.base,
-  &scc_info_Command_Point_Command_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Command_2eproto_once;
 static bool descriptor_table_Command_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Command_2eproto = {
-  &descriptor_table_Command_2eproto_initialized, descriptor_table_protodef_Command_2eproto, "Command.proto", 336,
-  &descriptor_table_Command_2eproto_once, descriptor_table_Command_2eproto_sccs, descriptor_table_Command_2eproto_deps, 3, 0,
+  &descriptor_table_Command_2eproto_initialized, descriptor_table_protodef_Command_2eproto, "Command.proto", 265,
+  &descriptor_table_Command_2eproto_once, descriptor_table_Command_2eproto_sccs, descriptor_table_Command_2eproto_deps, 1, 1,
   schemas, file_default_instances, TableStruct_Command_2eproto::offsets,
-  file_level_metadata_Command_2eproto, 3, file_level_enum_descriptors_Command_2eproto, file_level_service_descriptors_Command_2eproto,
+  file_level_metadata_Command_2eproto, 1, file_level_enum_descriptors_Command_2eproto, file_level_service_descriptors_Command_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -174,657 +114,28 @@ constexpr int Command::Header_ARRAYSIZE;
 
 // ===================================================================
 
-void Command_Address::InitAsDefaultInstance() {
-}
-class Command_Address::HasBitSetters {
- public:
-};
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Command_Address::kIpFieldNumber;
-const int Command_Address::kPortFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-Command_Address::Command_Address()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:Command.Address)
-}
-Command_Address::Command_Address(const Command_Address& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ip_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from.ip().size() > 0) {
-    ip_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.ip_);
-  }
-  port_ = from.port_;
-  // @@protoc_insertion_point(copy_constructor:Command.Address)
-}
-
-void Command_Address::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Command_Address_Command_2eproto.base);
-  ip_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  port_ = 0;
-}
-
-Command_Address::~Command_Address() {
-  // @@protoc_insertion_point(destructor:Command.Address)
-  SharedDtor();
-}
-
-void Command_Address::SharedDtor() {
-  ip_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-
-void Command_Address::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const Command_Address& Command_Address::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Command_Address_Command_2eproto.base);
-  return *internal_default_instance();
-}
-
-
-void Command_Address::Clear() {
-// @@protoc_insertion_point(message_clear_start:Command.Address)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  ip_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  port_ = 0;
-  _internal_metadata_.Clear();
-}
-
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* Command_Address::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // string ip = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_ip(), ptr, ctx, "Command.Address.ip");
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // int32 port = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          port_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool Command_Address::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:Command.Address)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string ip = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_ip()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->ip().data(), static_cast<int>(this->ip().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "Command.Address.ip"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 port = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &port_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:Command.Address)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:Command.Address)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void Command_Address::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:Command.Address)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string ip = 1;
-  if (this->ip().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->ip().data(), static_cast<int>(this->ip().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "Command.Address.ip");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->ip(), output);
-  }
-
-  // int32 port = 2;
-  if (this->port() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(2, this->port(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:Command.Address)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* Command_Address::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:Command.Address)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string ip = 1;
-  if (this->ip().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->ip().data(), static_cast<int>(this->ip().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "Command.Address.ip");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->ip(), target);
-  }
-
-  // int32 port = 2;
-  if (this->port() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->port(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:Command.Address)
-  return target;
-}
-
-size_t Command_Address::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:Command.Address)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string ip = 1;
-  if (this->ip().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->ip());
-  }
-
-  // int32 port = 2;
-  if (this->port() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->port());
-  }
-
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Command_Address::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:Command.Address)
-  GOOGLE_DCHECK_NE(&from, this);
-  const Command_Address* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Command_Address>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Command.Address)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:Command.Address)
-    MergeFrom(*source);
-  }
-}
-
-void Command_Address::MergeFrom(const Command_Address& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:Command.Address)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.ip().size() > 0) {
-
-    ip_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.ip_);
-  }
-  if (from.port() != 0) {
-    set_port(from.port());
-  }
-}
-
-void Command_Address::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:Command.Address)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void Command_Address::CopyFrom(const Command_Address& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Command.Address)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Command_Address::IsInitialized() const {
-  return true;
-}
-
-void Command_Address::Swap(Command_Address* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void Command_Address::InternalSwap(Command_Address* other) {
-  using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  ip_.Swap(&other->ip_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(port_, other->port_);
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata Command_Address::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-void Command_Point::InitAsDefaultInstance() {
-}
-class Command_Point::HasBitSetters {
- public:
-};
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Command_Point::kXFieldNumber;
-const int Command_Point::kYFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-Command_Point::Command_Point()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:Command.Point)
-}
-Command_Point::Command_Point(const Command_Point& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&x_, &from.x_,
-    static_cast<size_t>(reinterpret_cast<char*>(&y_) -
-    reinterpret_cast<char*>(&x_)) + sizeof(y_));
-  // @@protoc_insertion_point(copy_constructor:Command.Point)
-}
-
-void Command_Point::SharedCtor() {
-  ::memset(&x_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&y_) -
-      reinterpret_cast<char*>(&x_)) + sizeof(y_));
-}
-
-Command_Point::~Command_Point() {
-  // @@protoc_insertion_point(destructor:Command.Point)
-  SharedDtor();
-}
-
-void Command_Point::SharedDtor() {
-}
-
-void Command_Point::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const Command_Point& Command_Point::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Command_Point_Command_2eproto.base);
-  return *internal_default_instance();
-}
-
-
-void Command_Point::Clear() {
-// @@protoc_insertion_point(message_clear_start:Command.Point)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  ::memset(&x_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&y_) -
-      reinterpret_cast<char*>(&x_)) + sizeof(y_));
-  _internal_metadata_.Clear();
-}
-
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* Command_Point::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // int32 x = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          x_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // int32 y = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          y_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool Command_Point::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:Command.Point)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // int32 x = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &x_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 y = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &y_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:Command.Point)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:Command.Point)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void Command_Point::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:Command.Point)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // int32 x = 1;
-  if (this->x() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(1, this->x(), output);
-  }
-
-  // int32 y = 2;
-  if (this->y() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(2, this->y(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:Command.Point)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* Command_Point::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:Command.Point)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // int32 x = 1;
-  if (this->x() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->x(), target);
-  }
-
-  // int32 y = 2;
-  if (this->y() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->y(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:Command.Point)
-  return target;
-}
-
-size_t Command_Point::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:Command.Point)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // int32 x = 1;
-  if (this->x() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->x());
-  }
-
-  // int32 y = 2;
-  if (this->y() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->y());
-  }
-
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Command_Point::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:Command.Point)
-  GOOGLE_DCHECK_NE(&from, this);
-  const Command_Point* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Command_Point>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Command.Point)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:Command.Point)
-    MergeFrom(*source);
-  }
-}
-
-void Command_Point::MergeFrom(const Command_Point& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:Command.Point)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.x() != 0) {
-    set_x(from.x());
-  }
-  if (from.y() != 0) {
-    set_y(from.y());
-  }
-}
-
-void Command_Point::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:Command.Point)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void Command_Point::CopyFrom(const Command_Point& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Command.Point)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Command_Point::IsInitialized() const {
-  return true;
-}
-
-void Command_Point::Swap(Command_Point* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void Command_Point::InternalSwap(Command_Point* other) {
-  using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(x_, other->x_);
-  swap(y_, other->y_);
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata Command_Point::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
 void Command::InitAsDefaultInstance() {
-  ::_Command_default_instance_._instance.get_mutable()->address_ = const_cast< ::Command_Address*>(
-      ::Command_Address::internal_default_instance());
-  ::_Command_default_instance_._instance.get_mutable()->position_ = const_cast< ::Command_Point*>(
-      ::Command_Point::internal_default_instance());
+  ::_Command_default_instance_._instance.get_mutable()->payload_ = const_cast< PROTOBUF_NAMESPACE_ID::Any*>(
+      PROTOBUF_NAMESPACE_ID::Any::internal_default_instance());
 }
 class Command::HasBitSetters {
  public:
-  static const ::Command_Address& address(const Command* msg);
-  static const ::Command_Point& position(const Command* msg);
+  static const PROTOBUF_NAMESPACE_ID::Any& payload(const Command* msg);
 };
 
-const ::Command_Address&
-Command::HasBitSetters::address(const Command* msg) {
-  return *msg->address_;
+const PROTOBUF_NAMESPACE_ID::Any&
+Command::HasBitSetters::payload(const Command* msg) {
+  return *msg->payload_;
 }
-const ::Command_Point&
-Command::HasBitSetters::position(const Command* msg) {
-  return *msg->position_;
+void Command::clear_payload() {
+  if (GetArenaNoVirtual() == nullptr && payload_ != nullptr) {
+    delete payload_;
+  }
+  payload_ = nullptr;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Command::kHeaderFieldNumber;
-const int Command::kAddressFieldNumber;
-const int Command::kPositionFieldNumber;
+const int Command::kPayloadFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Command::Command()
@@ -836,15 +147,10 @@ Command::Command(const Command& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_address()) {
-    address_ = new ::Command_Address(*from.address_);
+  if (from.has_payload()) {
+    payload_ = new PROTOBUF_NAMESPACE_ID::Any(*from.payload_);
   } else {
-    address_ = nullptr;
-  }
-  if (from.has_position()) {
-    position_ = new ::Command_Point(*from.position_);
-  } else {
-    position_ = nullptr;
+    payload_ = nullptr;
   }
   header_ = from.header_;
   // @@protoc_insertion_point(copy_constructor:Command)
@@ -852,9 +158,9 @@ Command::Command(const Command& from)
 
 void Command::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Command_Command_2eproto.base);
-  ::memset(&address_, 0, static_cast<size_t>(
+  ::memset(&payload_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&header_) -
-      reinterpret_cast<char*>(&address_)) + sizeof(header_));
+      reinterpret_cast<char*>(&payload_)) + sizeof(header_));
 }
 
 Command::~Command() {
@@ -863,8 +169,7 @@ Command::~Command() {
 }
 
 void Command::SharedDtor() {
-  if (this != internal_default_instance()) delete address_;
-  if (this != internal_default_instance()) delete position_;
+  if (this != internal_default_instance()) delete payload_;
 }
 
 void Command::SetCachedSize(int size) const {
@@ -882,14 +187,10 @@ void Command::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && address_ != nullptr) {
-    delete address_;
+  if (GetArenaNoVirtual() == nullptr && payload_ != nullptr) {
+    delete payload_;
   }
-  address_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && position_ != nullptr) {
-    delete position_;
-  }
-  position_ = nullptr;
+  payload_ = nullptr;
   header_ = 0;
   _internal_metadata_.Clear();
 }
@@ -910,17 +211,10 @@ const char* Command::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::in
           set_header(static_cast<::Command_Header>(val));
         } else goto handle_unusual;
         continue;
-      // .Command.Address address = 2;
+      // .google.protobuf.Any payload = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(mutable_address(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .Command.Point position = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(mutable_position(), ptr);
+          ptr = ctx->ParseMessage(mutable_payload(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -968,22 +262,11 @@ bool Command::MergePartialFromCodedStream(
         break;
       }
 
-      // .Command.Address address = 2;
+      // .google.protobuf.Any payload = 2;
       case 2: {
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_address()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .Command.Point position = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_position()));
+               input, mutable_payload()));
         } else {
           goto handle_unusual;
         }
@@ -1023,16 +306,10 @@ void Command::SerializeWithCachedSizes(
       1, this->header(), output);
   }
 
-  // .Command.Address address = 2;
-  if (this->has_address()) {
+  // .google.protobuf.Any payload = 2;
+  if (this->has_payload()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::address(this), output);
-  }
-
-  // .Command.Point position = 3;
-  if (this->has_position()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, HasBitSetters::position(this), output);
+      2, HasBitSetters::payload(this), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1054,18 +331,11 @@ void Command::SerializeWithCachedSizes(
       1, this->header(), target);
   }
 
-  // .Command.Address address = 2;
-  if (this->has_address()) {
+  // .google.protobuf.Any payload = 2;
+  if (this->has_payload()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, HasBitSetters::address(this), target);
-  }
-
-  // .Command.Point position = 3;
-  if (this->has_position()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, HasBitSetters::position(this), target);
+        2, HasBitSetters::payload(this), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1089,18 +359,11 @@ size_t Command::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .Command.Address address = 2;
-  if (this->has_address()) {
+  // .google.protobuf.Any payload = 2;
+  if (this->has_payload()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *address_);
-  }
-
-  // .Command.Point position = 3;
-  if (this->has_position()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *position_);
+        *payload_);
   }
 
   // .Command.Header header = 1;
@@ -1136,11 +399,8 @@ void Command::MergeFrom(const Command& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_address()) {
-    mutable_address()->::Command_Address::MergeFrom(from.address());
-  }
-  if (from.has_position()) {
-    mutable_position()->::Command_Point::MergeFrom(from.position());
+  if (from.has_payload()) {
+    mutable_payload()->PROTOBUF_NAMESPACE_ID::Any::MergeFrom(from.payload());
   }
   if (from.header() != 0) {
     set_header(from.header());
@@ -1172,8 +432,7 @@ void Command::Swap(Command* other) {
 void Command::InternalSwap(Command* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(address_, other->address_);
-  swap(position_, other->position_);
+  swap(payload_, other->payload_);
   swap(header_, other->header_);
 }
 
@@ -1184,12 +443,6 @@ void Command::InternalSwap(Command* other) {
 
 // @@protoc_insertion_point(namespace_scope)
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::Command_Address* Arena::CreateMaybeMessage< ::Command_Address >(Arena* arena) {
-  return Arena::CreateInternal< ::Command_Address >(arena);
-}
-template<> PROTOBUF_NOINLINE ::Command_Point* Arena::CreateMaybeMessage< ::Command_Point >(Arena* arena) {
-  return Arena::CreateInternal< ::Command_Point >(arena);
-}
 template<> PROTOBUF_NOINLINE ::Command* Arena::CreateMaybeMessage< ::Command >(Arena* arena) {
   return Arena::CreateInternal< ::Command >(arena);
 }

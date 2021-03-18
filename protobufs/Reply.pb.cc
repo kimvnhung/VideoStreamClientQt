@@ -34,7 +34,7 @@ static void InitDefaultsscc_info_Reply_Reply_2eproto() {
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_Reply_Reply_2eproto}, {}};
 
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Reply_2eproto[1];
-static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_Reply_2eproto[2];
+static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_Reply_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_Reply_2eproto = nullptr;
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Reply_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
@@ -43,7 +43,6 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Reply_2eproto::offsets[] PROTO
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::Reply, header_),
   PROTOBUF_FIELD_OFFSET(::Reply, status_),
   PROTOBUF_FIELD_OFFSET(::Reply, description_),
 };
@@ -56,14 +55,10 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_Reply_2eproto[] =
-  "\n\013Reply.proto\"\222\002\n\005Reply\022\035\n\006header\030\001 \001(\0162"
-  "\r.Reply.Header\022\035\n\006status\030\002 \001(\0162\r.Reply.S"
-  "tatus\022\023\n\013description\030\003 \001(\t\"\200\001\n\006Header\022\022\n"
-  "\016UNKNOWN_HEADER\020\000\022\030\n\024ESTABLISH_CONNECTIO"
-  "N\020\001\022\020\n\014START_STREAM\020\002\022\017\n\013STOP_STREAM\020\003\022\022"
-  "\n\016START_TRACKING\020\004\022\021\n\rSTOP_TRACKING\020\005\"3\n"
-  "\006Status\022\022\n\016UNKNOWN_STATUS\020\000\022\013\n\007SUCCESS\020\001"
-  "\022\010\n\004FAIL\020\002b\006proto3"
+  "\n\013Reply.proto\"p\n\005Reply\022\035\n\006status\030\001 \001(\0162\r"
+  ".Reply.Status\022\023\n\013description\030\002 \001(\t\"3\n\006St"
+  "atus\022\022\n\016UNKNOWN_STATUS\020\000\022\013\n\007SUCCESS\020\001\022\010\n"
+  "\004FAIL\020\002b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_Reply_2eproto_deps[1] = {
 };
@@ -73,7 +68,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Rep
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Reply_2eproto_once;
 static bool descriptor_table_Reply_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Reply_2eproto = {
-  &descriptor_table_Reply_2eproto_initialized, descriptor_table_protodef_Reply_2eproto, "Reply.proto", 298,
+  &descriptor_table_Reply_2eproto_initialized, descriptor_table_protodef_Reply_2eproto, "Reply.proto", 135,
   &descriptor_table_Reply_2eproto_once, descriptor_table_Reply_2eproto_sccs, descriptor_table_Reply_2eproto_deps, 1, 0,
   schemas, file_default_instances, TableStruct_Reply_2eproto::offsets,
   file_level_metadata_Reply_2eproto, 1, file_level_enum_descriptors_Reply_2eproto, file_level_service_descriptors_Reply_2eproto,
@@ -81,38 +76,9 @@ const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Reply_
 
 // Force running AddDescriptors() at dynamic initialization time.
 static bool dynamic_init_dummy_Reply_2eproto = (  ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_Reply_2eproto), true);
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* Reply_Header_descriptor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_Reply_2eproto);
-  return file_level_enum_descriptors_Reply_2eproto[0];
-}
-bool Reply_Header_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-      return true;
-    default:
-      return false;
-  }
-}
-
-#if (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
-constexpr Reply_Header Reply::UNKNOWN_HEADER;
-constexpr Reply_Header Reply::ESTABLISH_CONNECTION;
-constexpr Reply_Header Reply::START_STREAM;
-constexpr Reply_Header Reply::STOP_STREAM;
-constexpr Reply_Header Reply::START_TRACKING;
-constexpr Reply_Header Reply::STOP_TRACKING;
-constexpr Reply_Header Reply::Header_MIN;
-constexpr Reply_Header Reply::Header_MAX;
-constexpr int Reply::Header_ARRAYSIZE;
-#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* Reply_Status_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_Reply_2eproto);
-  return file_level_enum_descriptors_Reply_2eproto[1];
+  return file_level_enum_descriptors_Reply_2eproto[0];
 }
 bool Reply_Status_IsValid(int value) {
   switch (value) {
@@ -143,7 +109,6 @@ class Reply::HasBitSetters {
 };
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Reply::kHeaderFieldNumber;
 const int Reply::kStatusFieldNumber;
 const int Reply::kDescriptionFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
@@ -161,18 +126,14 @@ Reply::Reply(const Reply& from)
   if (from.description().size() > 0) {
     description_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.description_);
   }
-  ::memcpy(&header_, &from.header_,
-    static_cast<size_t>(reinterpret_cast<char*>(&status_) -
-    reinterpret_cast<char*>(&header_)) + sizeof(status_));
+  status_ = from.status_;
   // @@protoc_insertion_point(copy_constructor:Reply)
 }
 
 void Reply::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Reply_Reply_2eproto.base);
   description_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&header_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&status_) -
-      reinterpret_cast<char*>(&header_)) + sizeof(status_));
+  status_ = 0;
 }
 
 Reply::~Reply() {
@@ -200,9 +161,7 @@ void Reply::Clear() {
   (void) cached_has_bits;
 
   description_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&header_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&status_) -
-      reinterpret_cast<char*>(&header_)) + sizeof(status_));
+  status_ = 0;
   _internal_metadata_.Clear();
 }
 
@@ -214,25 +173,17 @@ const char* Reply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inte
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .Reply.Header header = 1;
+      // .Reply.Status status = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-          set_header(static_cast<::Reply_Header>(val));
-        } else goto handle_unusual;
-        continue;
-      // .Reply.Status status = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
           set_status(static_cast<::Reply_Status>(val));
         } else goto handle_unusual;
         continue;
-      // string description = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+      // string description = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_description(), ptr, ctx, "Reply.description");
           CHK_(ptr);
         } else goto handle_unusual;
@@ -267,23 +218,9 @@ bool Reply::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .Reply.Header header = 1;
+      // .Reply.Status status = 1;
       case 1: {
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
-          int value = 0;
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   int, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_header(static_cast< ::Reply_Header >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .Reply.Status status = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
           int value = 0;
           DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
                    int, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_ENUM>(
@@ -295,9 +232,9 @@ bool Reply::MergePartialFromCodedStream(
         break;
       }
 
-      // string description = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
+      // string description = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
                 input, this->mutable_description()));
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
@@ -337,26 +274,20 @@ void Reply::SerializeWithCachedSizes(
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .Reply.Header header = 1;
-  if (this->header() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnum(
-      1, this->header(), output);
-  }
-
-  // .Reply.Status status = 2;
+  // .Reply.Status status = 1;
   if (this->status() != 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnum(
-      2, this->status(), output);
+      1, this->status(), output);
   }
 
-  // string description = 3;
+  // string description = 2;
   if (this->description().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->description().data(), static_cast<int>(this->description().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "Reply.description");
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      3, this->description(), output);
+      2, this->description(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -372,19 +303,13 @@ void Reply::SerializeWithCachedSizes(
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .Reply.Header header = 1;
-  if (this->header() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      1, this->header(), target);
-  }
-
-  // .Reply.Status status = 2;
+  // .Reply.Status status = 1;
   if (this->status() != 0) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      2, this->status(), target);
+      1, this->status(), target);
   }
 
-  // string description = 3;
+  // string description = 2;
   if (this->description().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->description().data(), static_cast<int>(this->description().length()),
@@ -392,7 +317,7 @@ void Reply::SerializeWithCachedSizes(
       "Reply.description");
     target =
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        3, this->description(), target);
+        2, this->description(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -416,20 +341,14 @@ size_t Reply::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string description = 3;
+  // string description = 2;
   if (this->description().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->description());
   }
 
-  // .Reply.Header header = 1;
-  if (this->header() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->header());
-  }
-
-  // .Reply.Status status = 2;
+  // .Reply.Status status = 1;
   if (this->status() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->status());
@@ -466,9 +385,6 @@ void Reply::MergeFrom(const Reply& from) {
 
     description_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.description_);
   }
-  if (from.header() != 0) {
-    set_header(from.header());
-  }
   if (from.status() != 0) {
     set_status(from.status());
   }
@@ -501,7 +417,6 @@ void Reply::InternalSwap(Reply* other) {
   _internal_metadata_.Swap(&other->_internal_metadata_);
   description_.Swap(&other->description_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  swap(header_, other->header_);
   swap(status_, other->status_);
 }
 
